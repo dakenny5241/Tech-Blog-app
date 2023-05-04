@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS data_db;
-CREATE DATABASE data_db;
+DROP DATABASE IF EXISTS database_db;
+CREATE DATABASE database_db;
