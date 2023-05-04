@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS data_db;
+CREATE DATABASE data_db;

@@ -1,0 +1,9 @@
+{{#if user}}
+  <h1>Welcome, {{user.username}}!</h1>
+  <form action="/dashboard" method="post">
+    <input type="text" name="title" placeholder="Post Title">
+    <textarea name="content" placeholder="Post Content"></textarea>
+    <input type="submit" value="Create Post">
+  </form>
+{{/if}}
+```
