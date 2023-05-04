@@ -68,3 +68,6 @@ exports.logout = (req, res) => {
   });
 };
 ```
+
+module.exports = router;
+``

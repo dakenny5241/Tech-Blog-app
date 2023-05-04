@@ -37,3 +37,70 @@ module.exports = (sequelize, DataTypes) => {
   return Comment;
 };
 ```
+
+**routes/index.js**
+```js
+const express = require('express');
+const router = express.Router();
+const postsController = require('../controllers/posts');
+const commentsController = require('../controllers/comments');
+
+router.get('/', postsController.index);
+
+router.get('/post/:id', postsController.show);
+
+router.post('/post/:id/comment', commentsController.create);
+
+router.get('/dashboard', postsController.dashboard);
+
+module.exports = router;
+```
+
+**routes/post.js**
+```js
+const express = require('express');
+const router = express.Router();
+const postsController = require('../controllers/posts');
+const commentsController = require('../controllers/comments');
+
+router.get('/', postsController.index);
+
+
+router.get('/post/:id', postsController.show);
+
+router.post('/post/:id/comment', commentsController.create);
+
+router.get('/dashboard', postsController.dashboard);
+
+module.exports = router;
+```
+
+**routes/comments.js**
+
+```js
+const express = require('express');
+const router = express.Router();
+const postsController = require('../controllers/posts');
+const commentsController = require('../controllers/comments');
+
+router.get('/', postsController.index);
+
+router.get('/post/:id', postsController.show);
+
+router.post('/post/:id/comment', commentsController.create);
+
+router.get('/dashboard', postsController.dashboard);
+
+module.exports = router;
+```
+
+**server.js**
+```js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+```
