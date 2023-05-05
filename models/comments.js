@@ -1,3 +1,4 @@
+const sequelize = require('../config/connection');
 const Comment = require('../models/comment');
 exports.create = (req, res) => {
   if (req.session.user) {

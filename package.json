@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/dakenny5241/Tech-Blog-app/issues"
   },
-  "homepage": "https://github.com/dakenny5241/Tech-Blog-app#readme"
+  "homepage": "https://github.com/dakenny5241/Tech-Blog-app#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
 }
